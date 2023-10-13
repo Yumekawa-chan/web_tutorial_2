@@ -21,9 +21,9 @@ const txt = {
 
 for(const image of images){
     const newImage = document.createElement('img');
-    newImage.setAttribute('src', `images/${image}`);
-    newImage.setAttribute('alt', txt[image]);
-    thumbBar.appendChild(newImage);
+    newImage.setAttribute('src', `images/${image}`); // 新しく追加するソースを指定
+    newImage.setAttribute('alt', txt[image]); // alt の指定。無くても動きそう
+    thumbBar.appendChild(newImage); // ここで初めて画像として追加。
     newImage.addEventListener('click', e => {
         displayedImage.src = e.target.src;
         displayedImage.alt = e.target.alt;
